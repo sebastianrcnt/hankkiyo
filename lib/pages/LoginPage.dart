@@ -14,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: setAppBar(innerText: "로그인"),
+      appBar: HAppBar(title: "로그인"),
       body: Center(
         child: Container(
           width: 335.0,

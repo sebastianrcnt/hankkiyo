@@ -11,7 +11,7 @@ class _MyPageState extends State<MyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: setAppBar(innerText: "마이페이지"),
+      appBar: HAppBar(title: "마이페이지"),
       body: Center(
         child: Text("마이페이지"),
       ),

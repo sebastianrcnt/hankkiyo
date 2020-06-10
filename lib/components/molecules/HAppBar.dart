@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 
-Widget setAppBar({String innerText}) {
-  return AppBar(
-    centerTitle: true,
-    title: Text(
-      innerText,
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 17.0,
+class HAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final String title;
+
+  const HAppBar({this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      centerTitle: true,
+      title: Text(
+        this.title,
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 17.0,
+        ),
       ),
-    ),
-    // actions: <Widget>[
-    //   FlatButton(
-    //     child: Text("로그인"),
-    //     onPressed: () {},
-    //   ),
-    // ],
-    backgroundColor: Colors.white,
-    elevation: 0.0,
-  );
+      backgroundColor: Colors.white,
+      elevation: 0.0,
+    );
+  }
+
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
