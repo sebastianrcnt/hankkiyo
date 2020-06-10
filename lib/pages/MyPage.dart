@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hankkiyo/components/molecules/HAppBar.dart';
 import 'package:hankkiyo/components/molecules/HBottomNavigationBar.dart';
@@ -13,7 +14,18 @@ class _MyPageState extends State<MyPage> {
     return Scaffold(
       appBar: HAppBar(title: "마이페이지"),
       body: Center(
-        child: Text("마이페이지"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            CupertinoTextField(
+              placeholder: "SHIT",
+            ),
+            FlatButton(
+              child: Text("나를 누르세요"),
+              onPressed: () {},
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: HBottomNavigationBar(),
     );

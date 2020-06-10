@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class LoginButton extends StatefulWidget {
+class HActionButton extends StatefulWidget {
   final String innerText;
   bool isLoading;
 
-  LoginButton({Key key, this.innerText}) : super(key: key) {
+  HActionButton({Key key, this.innerText}) : super(key: key) {
     this.isLoading = false;
   }
 
   @override
-  _LoginButtonState createState() => _LoginButtonState();
+  _HActionButtonState createState() => _HActionButtonState();
 }
 
-class _LoginButtonState extends State<LoginButton> {
+class _HActionButtonState extends State<HActionButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

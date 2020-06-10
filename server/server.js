@@ -22,6 +22,10 @@ app.use((req, res, next) => {
 });
 
 // responses
+app.get("/hello", (req, res) => {
+	res.send('world');
+})
+
 app.post("/signup", (req, res) => {
   const { phone, name, password } = req.body;
   if (phone && name && password) {
@@ -53,7 +57,7 @@ app.post("/signup", (req, res) => {
   }
 });
 
-app.get("/login", (req, res) => {
+app.post("/login", (req, res) => {
   const { phone, password } = req.body;
   console.table(req.body);
   db.serialize(() => {
